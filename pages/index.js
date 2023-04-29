@@ -1,17 +1,19 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Ubuntu } from "next/font/google";
 import Main from "../components/Home";
-import About from '@/components/About';
-import Portfolio from '@/components/Portfolio';
-import Contact from '@/components/Contact';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import About from "@/components/About";
+import Portfolio from "@/components/Portfolio";
+import Contact from "@/components/Contact";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Ubuntu({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+});
 
 export default function Home() {
   return (
-    <main className="max-w-6xl mx-auto">
+    <main className={inter.className}>
       <Header />
       <Main />
       <About />
@@ -19,5 +21,5 @@ export default function Home() {
       <Contact />
       <Footer />
     </main>
-  )
+  );
 }
